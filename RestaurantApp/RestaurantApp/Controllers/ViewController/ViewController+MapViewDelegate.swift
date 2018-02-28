@@ -23,17 +23,14 @@ extension ViewController:GMSMapViewDelegate{
     }
     
     
-    /// Funcao que prepara a info view para ser exibida na te;a
+    /// Funcao que prepara a info view para ser exibida na tela
     func setupInfoView(){
         if self.markerInfoView != nil {
             self.markerInfoView?.translatesAutoresizingMaskIntoConstraints = false
-            
             self.markerInfoView?.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1, constant: -30).isActive = true
             self.markerInfoView?.heightAnchor.constraint(equalToConstant: 50)
             self.markerInfoView?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 30).isActive = true
             self.markerInfoView?.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-            
-            
         }
     }
     
@@ -92,5 +89,56 @@ extension ViewController:GMSMapViewDelegate{
         removeAllInfoFromScreen()
         
         return changeCameraPosition(Coordinates: userLocation.coordinate, Zoom: 16)
+    }
+    
+    
+    @objc func createGpsSheet(){
+        // GoogleMaps - Rotas
+        
+        let alertController = UIAlertController(title: "", message: "Qual aplicativo você deseja utilizar para orientações de trajeto?", preferredStyle: .actionSheet)
+        let mapsAction = UIAlertAction(title: "Maps", style: .default, handler: { (_) in
+            print("MAPS")
+            
+            if (UIApplication.shared.canOpenURL(NSURL(string:"http://maps.apple.com/")! as URL)) {
+                UIApplication.shared.openURL(NSURL(string:
+                    "http://maps.apple.com/?saddr=\(self.googleMapView.myLocation!.coordinate.latitude),\(self.googleMapView.myLocation!.coordinate.longitude)&daddr=\(self.markerInfoView!.coordinates!.latitude),\(self.markerInfoView!.coordinates!.longitude)")! as URL)
+            }
+            else {
+                
+                let alertController = UIAlertController(title: "Rota do percurso", message: "Você não possui o Google Maps instalado! Instale e veja a rota ideal!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        })
+        let googleAction = UIAlertAction(title: "Google Maps", style: .default, handler: { (_) in
+            print("GOOGLE")
+            
+            // Se tiver o google maps instalado
+            if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
+                UIApplication.shared.openURL(NSURL(string:
+                    "comgooglemaps://?saddr=\(self.googleMapView.myLocation!.coordinate.latitude),\(self.googleMapView.myLocation!.coordinate.longitude)&daddr=\(self.markerInfoView!.coordinates!.latitude),\(self.markerInfoView!.coordinates!.longitude)&directionsmode=driving")! as URL)
+            }
+                //Caso o contrário
+            else {
+                
+                let alertController = UIAlertController(title: "Rota do percurso", message: "Você não possui o Google Maps instalado! Instale e veja a rota ideal!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+        })
+        
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: { (_) in
+            print("CANCEL")
+        })
+        
+        alertController.addAction(mapsAction)
+        alertController.addAction(googleAction)
+        alertController.addAction(cancel)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }

@@ -7,16 +7,17 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 class InfoViewXib: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    var coordinates:CLLocationCoordinate2D?
+    
     class func instanceFromNib()->UIView{
         let info = UINib(nibName: "InfoView", bundle: nil).instantiate(withOwner: self, options: nil).first as! UIView
-        
         
         info.layer.cornerRadius = 10
         info.layer.masksToBounds = true
@@ -26,8 +27,10 @@ class InfoViewXib: UIView {
   
     
     @IBAction func openNavigation(_ sender: UIButton) {
-        print("Botão Funciona!")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goButton"), object: nil)
     }
+    
+    
 }
 
 

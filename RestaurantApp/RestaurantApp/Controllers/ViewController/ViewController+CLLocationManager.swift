@@ -43,6 +43,7 @@ extension ViewController:CLLocationManagerDelegate {
             getRestaurantPlaces(coordinate: location.coordinate)
             locationManager.stopUpdatingLocation()
         }
-        
     }
+    
+    
 }

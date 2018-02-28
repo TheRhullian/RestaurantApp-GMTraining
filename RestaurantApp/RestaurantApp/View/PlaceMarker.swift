@@ -31,6 +31,7 @@ class PlaceMarker: GMSMarker {
         //Popula a InfoXib para exibir as informações do restaurante
         infoWindow.titleLabel.text = place.name
         infoWindow.subtitleLabel.text = place.address
+        infoWindow.coordinates = place.coordinate
         
         return infoWindow
     }

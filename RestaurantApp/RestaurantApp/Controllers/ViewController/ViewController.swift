@@ -32,6 +32,9 @@ class ViewController: UIViewController {
         
         //Faz a requisição de autorização para o sistema utilizar a localização do usuário
         self.locationManager.requestWhenInUseAuthorization()
+        
+        //Aqui cria-se um observer para a notificação do momento em que o botão de ir for pressionada
+        NotificationCenter.default.addObserver(self, selector: #selector(createGpsSheet), name: NSNotification.Name(rawValue: "goButton"), object: nil)
     }
     
     
@@ -72,4 +75,5 @@ class ViewController: UIViewController {
 
 
 }
+
 

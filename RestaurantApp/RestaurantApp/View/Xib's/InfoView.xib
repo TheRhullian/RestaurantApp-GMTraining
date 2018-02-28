@@ -25,22 +25,22 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5U-eG-474">
-                    <rect key="frame" x="16" y="11" width="274" height="60"/>
-                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
+                    <rect key="frame" x="16" y="11" width="328" height="60"/>
+                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gte-Hh-Tkk">
                     <rect key="frame" x="16" y="66" width="215" height="48"/>
-                    <fontDescription key="fontDescription" name="DroidSans" family="Droid Sans" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="DroidSans" family="Droid Sans" pointSize="15"/>
                     <color key="textColor" red="0.88904738165692709" green="0.94344860406091369" blue="0.94189576416549359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoA-Nd-8Qt">
-                    <rect key="frame" x="277" y="56" width="67" height="56"/>
+                    <rect key="frame" x="263" y="66" width="81" height="46"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="67" id="7Tg-Mb-ohs"/>
-                        <constraint firstAttribute="height" constant="56" id="GpA-OP-pD6"/>
+                        <constraint firstAttribute="width" constant="81" id="7Tg-Mb-ohs"/>
+                        <constraint firstAttribute="height" constant="46" id="GpA-OP-pD6"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="Ir">
@@ -56,12 +56,12 @@
                 <constraint firstItem="B2w-Zz-6eV" firstAttribute="bottom" secondItem="PoA-Nd-8Qt" secondAttribute="bottom" constant="13" id="0hI-T5-Tmp"/>
                 <constraint firstItem="B2w-Zz-6eV" firstAttribute="trailing" secondItem="PoA-Nd-8Qt" secondAttribute="trailing" constant="16" id="2h6-dX-gzl"/>
                 <constraint firstItem="l5U-eG-474" firstAttribute="top" secondItem="B2w-Zz-6eV" secondAttribute="top" constant="11" id="CaP-np-6f2"/>
-                <constraint firstItem="gte-Hh-Tkk" firstAttribute="width" secondItem="l5U-eG-474" secondAttribute="width" constant="-59" id="Jug-hc-7m1"/>
+                <constraint firstItem="gte-Hh-Tkk" firstAttribute="width" secondItem="l5U-eG-474" secondAttribute="width" constant="-113" id="Jug-hc-7m1"/>
                 <constraint firstItem="gte-Hh-Tkk" firstAttribute="leading" secondItem="l5U-eG-474" secondAttribute="leading" id="Nkj-6A-Szi"/>
                 <constraint firstItem="gte-Hh-Tkk" firstAttribute="height" secondItem="l5U-eG-474" secondAttribute="height" constant="-12" id="Q1t-og-ltf"/>
                 <constraint firstItem="B2w-Zz-6eV" firstAttribute="bottom" secondItem="gte-Hh-Tkk" secondAttribute="bottom" constant="11" id="f8N-gd-gBK"/>
                 <constraint firstItem="l5U-eG-474" firstAttribute="leading" secondItem="B2w-Zz-6eV" secondAttribute="leading" constant="16" id="geX-45-oUG"/>
-                <constraint firstItem="B2w-Zz-6eV" firstAttribute="trailing" secondItem="l5U-eG-474" secondAttribute="trailing" constant="70" id="pxn-Qa-tz9"/>
+                <constraint firstItem="B2w-Zz-6eV" firstAttribute="trailing" secondItem="l5U-eG-474" secondAttribute="trailing" constant="16" id="pxn-Qa-tz9"/>
                 <constraint firstItem="gte-Hh-Tkk" firstAttribute="top" secondItem="l5U-eG-474" secondAttribute="bottom" constant="-5" id="yzr-wb-4s3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
