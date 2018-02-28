@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DroidSansMerged-Regular.ttf">
+            <string>DroidSans</string>
+        </array>
+        <array key="GeezaPro.ttc">
+            <string>GeezaPro-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="n9m-u7-bGP" customClass="InfoViewXib" customModule="RestaurantApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5U-eG-474">
+                    <rect key="frame" x="16" y="11" width="274" height="60"/>
+                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gte-Hh-Tkk">
+                    <rect key="frame" x="16" y="66" width="215" height="48"/>
+                    <fontDescription key="fontDescription" name="DroidSans" family="Droid Sans" pointSize="18"/>
+                    <color key="textColor" red="0.88904738165692709" green="0.94344860406091369" blue="0.94189576416549359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoA-Nd-8Qt">
+                    <rect key="frame" x="277" y="56" width="67" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="7Tg-Mb-ohs"/>
+                        <constraint firstAttribute="height" constant="56" id="GpA-OP-pD6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="Ir">
+                        <color key="titleColor" red="0.61679092639593902" green="0.040357737491669966" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openNavigation:" destination="n9m-u7-bGP" eventType="touchUpInside" id="8j6-Ak-Xdm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.49121404449544526" blue="0.44617788190527841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="B2w-Zz-6eV" firstAttribute="bottom" secondItem="PoA-Nd-8Qt" secondAttribute="bottom" constant="13" id="0hI-T5-Tmp"/>
+                <constraint firstItem="B2w-Zz-6eV" firstAttribute="trailing" secondItem="PoA-Nd-8Qt" secondAttribute="trailing" constant="16" id="2h6-dX-gzl"/>
+                <constraint firstItem="l5U-eG-474" firstAttribute="top" secondItem="B2w-Zz-6eV" secondAttribute="top" constant="11" id="CaP-np-6f2"/>
+                <constraint firstItem="gte-Hh-Tkk" firstAttribute="width" secondItem="l5U-eG-474" secondAttribute="width" constant="-59" id="Jug-hc-7m1"/>
+                <constraint firstItem="gte-Hh-Tkk" firstAttribute="leading" secondItem="l5U-eG-474" secondAttribute="leading" id="Nkj-6A-Szi"/>
+                <constraint firstItem="gte-Hh-Tkk" firstAttribute="height" secondItem="l5U-eG-474" secondAttribute="height" constant="-12" id="Q1t-og-ltf"/>
+                <constraint firstItem="B2w-Zz-6eV" firstAttribute="bottom" secondItem="gte-Hh-Tkk" secondAttribute="bottom" constant="11" id="f8N-gd-gBK"/>
+                <constraint firstItem="l5U-eG-474" firstAttribute="leading" secondItem="B2w-Zz-6eV" secondAttribute="leading" constant="16" id="geX-45-oUG"/>
+                <constraint firstItem="B2w-Zz-6eV" firstAttribute="trailing" secondItem="l5U-eG-474" secondAttribute="trailing" constant="70" id="pxn-Qa-tz9"/>
+                <constraint firstItem="gte-Hh-Tkk" firstAttribute="top" secondItem="l5U-eG-474" secondAttribute="bottom" constant="-5" id="yzr-wb-4s3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="B2w-Zz-6eV"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="gte-Hh-Tkk" id="TOc-XL-Qq6"/>
+                <outlet property="titleLabel" destination="l5U-eG-474" id="HPi-7g-7SI"/>
+            </connections>
+            <point key="canvasLocation" x="-139" y="103.5"/>
+        </view>
+    </objects>
+</document>

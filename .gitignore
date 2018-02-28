@@ -41,3 +41,11 @@ xcuserdata
 # Carthage/Checkouts
 
 Carthage/Build
+
+RestaurantApp/RestaurantApp\.xcworkspace/
+
+RestaurantApp/Pods/
+
+RestaurantApp/\.DS_Store
+
+\.DS_Store
