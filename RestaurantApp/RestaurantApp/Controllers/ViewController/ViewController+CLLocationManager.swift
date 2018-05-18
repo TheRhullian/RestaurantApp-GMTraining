@@ -10,8 +10,7 @@ import Foundation
 import GoogleMaps
 
 extension ViewController:CLLocationManagerDelegate {
-    
-    
+
     /// Essa função é chamada sempre que houver uma alteração na autorização de uso da localização
     ///
     /// - Parameters:
@@ -21,14 +20,13 @@ extension ViewController:CLLocationManagerDelegate {
         guard status == .authorizedWhenInUse else {
             return
         }
-        
+
         locationManager.startUpdatingLocation()
-        
+
         googleMapView.isMyLocationEnabled = true
         googleMapView.settings.myLocationButton = true
     }
-    
-    
+
     /// Essa função é chamada sempre que o location manager receber atualizações de coordenadas
     ///
     /// - Parameters:
@@ -38,12 +36,11 @@ extension ViewController:CLLocationManagerDelegate {
         guard let location = locations.first else {
             return
         }
-        
+
         if changeCameraPosition(Coordinates: location.coordinate, Zoom: 16) {
             getRestaurantPlaces(coordinate: location.coordinate)
             locationManager.stopUpdatingLocation()
         }
     }
-    
-    
+
 }

@@ -6,6 +6,7 @@ target 'RestaurantApp' do
   use_frameworks!
 pod 'SwiftyJSON'
 pod 'Alamofire'
+pod 'SwiftLint'
 pod 'GooglePlaces'
 pod 'GooglePlacePicker'  
 pod 'GoogleMaps'

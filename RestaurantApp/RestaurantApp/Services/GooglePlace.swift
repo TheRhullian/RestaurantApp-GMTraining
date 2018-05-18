@@ -19,18 +19,13 @@ class GooglePlace {
     var photoReference: String?
     var photo: UIImage?
 
-    init(dictionary:NSDictionary){
+    init(dictionary:NSDictionary) {
         let json = JSON(dictionary)
-        print(json)
         name = json["name"].stringValue
         address = json["vicinity"].stringValue
         let lat = json["geometry"]["location"]["lat"].doubleValue as CLLocationDegrees
         let lng = json["geometry"]["location"]["lng"].doubleValue as CLLocationDegrees
-        
         let coord = CLLocationCoordinate2DMake(lat, lng)
         self.coordinate = coord
-        
-        
     }
-    
 }
